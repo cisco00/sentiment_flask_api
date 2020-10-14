@@ -2,6 +2,7 @@
 from collections import Counter
 import pandas as pd
 import numpy as np
+from nltk import app
 from sklearn.base import ClassifierMixin, BaseEstimator
 
 
@@ -21,3 +22,6 @@ class MajorityClassifier(BaseEstimator, ClassifierMixin):
 
     def predict_proba(self, X):
         np.dot(np.ones(X.shape[0], 1)), self.fraction.reshape(-1, 3)
+
+    if __name__ == "__main__":
+        app.run(debug=True)
